@@ -29,6 +29,13 @@ main (){
 				cin>>num2;
 				resta(num1,num2);
 				break;	
+			case 'c':
+       				cout<<"Dame el valor del numero 1: ";
+	   			cin>>num1;
+       				cout<<"Dame el valor del numero 2: ";
+	   			cin>>num2;
+       				multiplicacion(num1,num2);
+	   			break;
 		}
 	}
 }
@@ -42,5 +49,10 @@ void resta(float num1, float num2){
 	float total;
 	total = num1 - num2;
 	cout<<"El resultado es: "<<total;
+}
+	void multiplicacion(float num1, float num2){
+	float total;
+ 	total = num1 * num2;
+	cout<<"El resultado final es:	"<<total;
 }
 

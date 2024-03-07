@@ -4,6 +4,9 @@ using namespace std;
 
 void suma(float num1, float num2);
 void resta(float num1, float num2);
+void multiplicacion(float num1, float num2);
+void division(float num1, float num2);
+
 main (){
 	int num1,num2;
 	char menu;
@@ -36,6 +39,13 @@ main (){
 	   			cin>>num2;
        				multiplicacion(num1,num2);
 	   			break;
+			case 'd':
+       				cout<<"Dame el valor del numero 1: ";
+	   			cin>>num1;
+       				cout<<"Dame el valor del numero 2: ";
+	   			cin>>num2;
+       				division(num1,num2);
+	   			break;
 		}
 	}
 }
@@ -53,6 +63,11 @@ void resta(float num1, float num2){
 	void multiplicacion(float num1, float num2){
 	float total;
  	total = num1 * num2;
+	cout<<"El resultado final es:	"<<total;
+}
+void division(float num1, float num2){
+	float total;
+ 	total = num1 / num2;
 	cout<<"El resultado final es:	"<<total;
 }
 

@@ -3,5 +3,8 @@ using namespace std;
 
 struct calculadora {
 
-  calculadora()
+  calculadora(){
+  
+  }
+
 

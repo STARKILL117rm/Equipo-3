@@ -6,7 +6,7 @@ void suma(float num1, float num2);
 void resta(float num1, float num2);
 void multiplicacion(float num1, float num2);
 void division(float num1, float num2);
-
+float Raiz(float numero);
 main (){
 	int num1,num2;
 	char menu;
@@ -70,4 +70,17 @@ void division(float num1, float num2){
  	total = num1 / num2;
 	cout<<"El resultado final es:	"<<total;
 }
+float Raiz(float numero) {
+    if (numero < 0) {
+        return -1.0;
+    }
 
+    float x0 = numero / 2.0; 
+    float x1;
+
+    do {
+        x1 = (x0 + numero / x0) / 2.0;
+    } while (abs(x1 - x0) >= 0.0001);
+
+    return x1;
+}

@@ -1,11 +1,5 @@
-#include<iostream>
-using namespace std;
 
-struct calculadora {
-
-  calculadora(){
-  }
-/*#include <iostream>
+#include <iostream>
 using namespace std;
 
 void suma(float num1, float num2);
@@ -36,7 +30,7 @@ main (){
 				resta(num1,num2);
 				break;	
 		}
-	//}
+	}
 }
 //Funciones//
 void suma(float num1, float num2){
@@ -49,4 +43,4 @@ void resta(float num1, float num2){
 	total = num1 - num2;
 	cout<<"El resultado es: "<<total;
 }
-*/
+

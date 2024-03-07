@@ -6,7 +6,7 @@ void suma(float num1, float num2);
 void resta(float num1, float num2);
 void multiplicacion(float num1, float num2);
 void division(float num1, float num2);
-float Raiz(float num1);
+float raiz(float num1);
 main (){
 	int num1,num2;
 	char menu;
@@ -50,7 +50,7 @@ main (){
 			case 'e':
 				cout<<"Dame el valor del numero: ";
 				cin>>num1;
-				Raiz(num1);
+				raiz(num1);
 				    if (raiz == -1.0) {
         cout << "No se puede calcular la raíz cuadrada de un número negativo." << endl;
     } else {
@@ -75,7 +75,7 @@ void resta(float num1, float num2){
 	total = num1 - num2;
 	cout<<"El resultado es: "<<total;
 }
-	void multiplicacion(float num1, float num2){
+void multiplicacion(float num1, float num2){
 	float total;
  	total = num1 * num2;
 	cout<<"El resultado final es:	"<<total;
@@ -85,7 +85,7 @@ void division(float num1, float num2){
  	total = num1 / num2;
 	cout<<"El resultado final es:	"<<total;
 }
-float Raiz(float num1) {
+float raiz(float num1) {
     if (numero < 0) {
         return -1.0;
     }

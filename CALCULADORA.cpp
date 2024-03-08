@@ -10,7 +10,7 @@ float raiz(float num1);
 float exponente(float base, float exponente);
 
 int main() {
-    int num1, num2;
+    float num1, num2; // Cambiado a float para permitir decimales
     char menu;
     cout << "--> Menu de la calculadora <---" << endl;
     cout << "a) Suma" << endl;
@@ -52,8 +52,7 @@ int main() {
     case 'e':
         cout << "Dame el valor del numero: ";
         cin >> num1;
-        raiz(num1);
-        if (raiz == -1.0) {
+        if (num1 < 0) {
             cout << "No se puede calcular la raíz cuadrada de un número negativo." << endl;
         } else {
             cout << "La raiz cuadrada de " << num1 << " es: " << raiz(num1) << endl;
@@ -77,31 +76,32 @@ int main() {
 void suma(float num1, float num2) {
     float total;
     total = num1 + num2;
-    cout << "El resultado es: " << total;
+    cout << "El resultado es: " << total << endl; // Agregado un salto de línea al final
 }
 
 void resta(float num1, float num2) {
     float total;
     total = num1 - num2;
-    cout << "El resultado es: " << total;
+    cout << "El resultado es: " << total << endl; // Agregado un salto de línea al final
 }
 
 void multiplicacion(float num1, float num2) {
     float total;
     total = num1 * num2;
-    cout << "El resultado final es: " << total;
+    cout << "El resultado final es: " << total << endl; // Agregado un salto de línea al final
 }
 
 void division(float num1, float num2) {
-    float total;
-    total = num1 / num2;
-    cout << "El resultado final es: " << total;
+    if (num2 == 0) {
+        cout << "No se puede dividir entre cero." << endl;
+    } else {
+        float total;
+        total = num1 / num2;
+        cout << "El resultado final es: " << total << endl; // Agregado un salto de línea al final
+    }
 }
 
 float raiz(float num1) {
-    if (num1 < 0) {
-        return -1.0;
-    }
     return sqrt(num1);
 }
 
